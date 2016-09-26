@@ -1,0 +1,7 @@
+<div class="widget-area">
+  <lang-list (onOpen)="onOpenSnippetForLanguage($event)"></lang-list>
+  <snippet-list (onOpen)="onOpenSnippet($event)" [language]="language"></snippet-list>
+</div>
+<div class="content-area">
+  <snippet-editor [snippet]="snippet"></snippet-editor>
+</div>

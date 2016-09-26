@@ -1,0 +1,34 @@
+$susy: (
+  container: $size__site-main,
+  columns: 12,
+  global-box-sizing: border-box,
+	gutters: 0
+	// use-custom:(rem: true)
+);
+@include border-box-sizing;
+html,body{
+  margin:0;
+  padding:0;
+  height: 100%;
+}
+.container{
+  @include container;
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+}
+.widget-area{
+  height: 100%;
+  @include span(5 inside no-gutters);
+  lang-list{
+    @include span(5);
+  }
+  snippet-list{
+    @include span(7 last);
+  }
+}
+.content-area {
+	@include span(7 last);
+}

@@ -1,0 +1,61 @@
+.snippet-list {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	.form {
+		background: $color__light-gray;
+		height: auto;
+		padding: .5em .5em 1em;
+		input {
+			border: 1px solid $color__light-gray;
+			clear: both;
+			padding: .5em 1em;
+			width: 100%;
+		}
+		.label {
+			background-color: $brand-primary;
+			border-radius: 1em;
+			color: $badge-color;
+			cursor: pointer;
+			display: inline-block;
+			margin-top: .5em;
+			padding: .5em;
+		}
+	}
+	.snippets {
+		background-color: $color__item-background-color;
+		flex: 1;
+		overflow-x: hidden;
+		overflow-y: auto;
+		.snippet {
+			background-color: $color__item-background-color;
+			border-bottom: 1px solid $color__light-gray;
+			cursor: pointer;
+			padding: .8em;
+			width: 100%;
+			h2,
+			p {
+				margin: 0;
+				padding: 0;
+			}
+			h2 {
+				font-size: 1.25em;
+			}
+			p {
+				margin-top: 0.5em;
+			}
+      &:hover, &.active{
+        background-color: $brand-primary;
+        color: $color__text-inverse;
+      }
+			.tag{
+				background-color: $brand-primary;
+				border-radius: .2em;
+				color: $color__text-inverse;
+				margin-left: .5em;
+				margin-top: .5em;
+				padding: .3em .5em;
+			}
+		}
+	}
+}

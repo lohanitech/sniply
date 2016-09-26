@@ -1,0 +1,6 @@
+dist/
+node_modules
+typings
+src/frontend/app/**/*.js
+src/frontend/app/**/*.map
+npm-debug.log

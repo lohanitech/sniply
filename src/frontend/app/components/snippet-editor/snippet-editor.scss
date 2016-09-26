@@ -1,0 +1,38 @@
+.snippet-editor{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .form-elements{
+    clear: both;
+    height: auto;
+    padding: 0.5em 1em 0.5em 3em;
+    input{
+      width: 100%;
+      padding: 0.5em 1em;
+      clear: both;
+      font-size: $size__font-base;
+      margin-top: 0.5em;
+    }
+    select{
+      margin-top: 0.5em;
+      width: 50%;
+    }
+    textarea{
+      display: block;
+      margin-top: 0.5em;
+      width: 100%;
+    }
+
+  }
+  tags{
+    display: block;
+    width: 100%;
+  }
+  code-editor{
+    margin-top: 0.2em;
+    display: flex;
+    flex-grow: 1;
+    width: 99%;
+  }
+}

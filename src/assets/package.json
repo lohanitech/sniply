@@ -1,0 +1,6 @@
+{
+  "main" : "index.js",
+  "version" : "0.0.1",
+  "name": "Sniply",
+  "description": "A simple code snippet manager"
+}

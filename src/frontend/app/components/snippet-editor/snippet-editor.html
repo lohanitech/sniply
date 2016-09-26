@@ -1,0 +1,15 @@
+<div class="snippet-editor">
+  <div class="form-elements">
+    <button type="button" class="button save-button" (click)="save()">Save</button>
+    <button type="button" class="button new-button" (click)="newSnippet()">New</button>
+      <input id="title" name="title" type="text" [(ngModel)]="title" placeholder="* title" class="form-control"  />
+      <textarea class="form-control" placeholder="description" [(ngModel)]="description"></textarea>
+      <select id="lang" name="lang" class="form-control" [(ngModel)]="lang">
+        <option *ngFor="let lg of langStore.languages$ | async" [ngValue]="lg.id">
+          {{lg.title}}
+        </option>
+      </select>
+      <tags [tags]="tags"></tags>
+  </div>
+  <code-editor #codeEditor [lang]="lang" [code]="code"></code-editor>
+</div>

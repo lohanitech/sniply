@@ -1,0 +1,23 @@
+<div class="lang-list">
+  <div class="lang-form">
+    <div class="form-elements">
+      <div class="form-group">
+        <input id="id" name="id" type="text" [(ngModel)]="id" placeholder="id"  />
+      </div>
+      <div class="form-group">
+        <input id="title" name="title" type="text" [(ngModel)]="title" placeholder="title" />
+      </div>
+      <button type="button" (click)="save()">Save</button>
+    </div>
+  </div>
+  <div class="languages">
+    <p>
+      Filter Snippets by Languages
+    </p>
+    <div *ngFor="let lang of langStore.languages$ | async" (click)="openSnippetForLang(lang)" class="language">
+      <h2>
+        {{lang.title}}
+      </h2>
+    </div>
+  </div>
+</div>

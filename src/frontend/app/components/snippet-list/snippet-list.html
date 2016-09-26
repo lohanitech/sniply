@@ -1,0 +1,19 @@
+<div class="snippet-list">
+  <div class="form">
+    <input placeholder="search" type="text" [(ngModel)]="searchTerm" [formControl]="searchControl" />
+    <span *ngIf="_lang" class="label" (click)="removeLangFilter()">{{_lang.title}}</span>
+  </div>
+  <div class="snippets">
+    <div class="snippet" *ngFor="let snippet of filteredSnippets" (click)="openSnippet(snippet)">
+      <h2>
+        {{snippet.title}}
+      </h2>
+      <p>
+        {{snippet.description}}
+      </p>
+      <p>
+        <span *ngFor="let tag of snippet.tags" class="tag">{{tag}}</span>
+      </p>
+    </div>
+  </div>
+</div>

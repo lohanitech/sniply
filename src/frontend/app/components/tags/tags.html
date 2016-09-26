@@ -1,0 +1,11 @@
+<div class="tags">
+  <ul (click)="focus()">
+    <li class="tag" *ngFor="let item of _tags">{{item}}</li>
+    <li class="tag nopadding">
+      <input id="tagInput"
+      [(ngModel)]="current"
+      (keyup)="keyUp($event)"
+      (blur)="blur()" />
+    </li>
+  </ul>
+</div>
